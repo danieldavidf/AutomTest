@@ -1251,10 +1251,10 @@ static void corpo_especificao(GtkWidget *p_widget) {
 void mostrar_sobre(GtkWidget *widget) {
 	GdkPixbuf *pixbuf = gdk_pixbuf_new_from_file("assets/logo.png", NULL);
 	GtkWidget *dialog = gtk_about_dialog_new();
-	//gtk_about_dialog_set_name(GTK_ABOUT_DIALOG(dialog), "AutomTest 0.9 © 2019");
-	gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(dialog), "0.9"); 
+	//gtk_about_dialog_set_name(GTK_ABOUT_DIALOG(dialog), "AutomTest 1.0 © 2019");
+	gtk_about_dialog_set_version(GTK_ABOUT_DIALOG(dialog), "1.0"); 
 	gtk_about_dialog_set_copyright(GTK_ABOUT_DIALOG(dialog),"© 2019 Daniel David Fernandes");
-	gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(dialog), "Gerador de testes automático para teste de unidade em Java com base na especificação dos parâmetros utilizando o framework JUnit para auxiliar na execução dos testes.");
+	gtk_about_dialog_set_comments(GTK_ABOUT_DIALOG(dialog), "Gerador de casos de testes para JUnit baseado em requisitos funcionais.");
 	gtk_about_dialog_set_website_label(GTK_ABOUT_DIALOG(dialog), "LinkedIn");
 	gtk_about_dialog_set_website(GTK_ABOUT_DIALOG(dialog), "http://www.linkedin.com/in/daniel-david-431a4216a");
 	gtk_about_dialog_set_logo(GTK_ABOUT_DIALOG(dialog), pixbuf);
