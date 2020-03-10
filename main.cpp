@@ -1,4 +1,3 @@
-// g++ -w main.cpp `pkg-config --libs --cflags gtk+-3.0`
 #include "interface.hpp"
 
 int main (int argc, gchar *argv[]) {
