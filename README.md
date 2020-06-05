@@ -1,11 +1,15 @@
-## AutomTest
+# AutomTest
 Gerador de casos de testes para JUnit baseado em requisitos funcionais.
 
-### Requisitos:
-GTK+ 3.0
+## Requisitos:
+PySimpleGUI
 
-### Instalação (Via terminal Linux):
-sudo apt-get install libgtk-3-dev
+## Instalações:
+sudo apt install python3-pip
 
-### Para executar (Via terminal Linux):
-g++ -w main.cpp \`pkg-config --libs --cflags gtk+-3.0\`
+sudo apt install python3-tk
+
+pip3 install pysimplegui
+
+### Para executar no Linux:
+python3 main.py
