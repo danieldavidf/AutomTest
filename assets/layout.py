@@ -21,7 +21,7 @@ def newLayoutInfoMetodo(MUT):
 
 	content = [
 		[sg.Text('Classe name *', size=(16, 1)), sg.InputText(MUT.class_name, size=(30, 1))],
-		[sg.Text('Pacote name', size=(16, 1)), sg.InputText(MUT.package_name, size=(30, 1))],
+		[sg.Text('Package name', size=(16, 1)), sg.InputText(MUT.package_name, size=(30, 1))],
 		[sg.Text('Method name *', size=(16, 1)), sg.InputText(MUT.name, size=(30, 1))],
 		[sg.Text('Parameters *', size=(16, 1)), sg.InputText(all_params, size=(30, 1))],
 		[sg.Text('Output type *', size=(16, 1)),

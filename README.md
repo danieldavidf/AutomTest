@@ -1,15 +1,15 @@
 # AutomTest
-Test case generator for JUnit based on functional requirements.
+Gerador de casos de testes para JUnit baseado em requisitos funcionais.
 
-## Requirement:
+## Requisitos:
 PySimpleGUI
 
-## Installations:
+## Instalações:
 sudo apt install python3-pip
 
 sudo apt install python3-tk
 
 pip3 install pysimplegui
 
-### Execute:
+### Para executar no Linux:
 python3 main.py

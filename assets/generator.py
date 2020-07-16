@@ -119,7 +119,7 @@ def header_content( MUT ):
 	if (MUT.package_name != ''):
 		content += "package " + MUT.package_name + ";\n"
 	content += "import org.junit.*;\nimport static org.junit.Assert.assertTrue;\n\npublic class "
-	content += MUT.class_name + "Teste extends " + MUT.class_name + "{\n"
+	content += MUT.class_name + "Test extends " + MUT.class_name + "{\n"
 	return content
 
 
@@ -167,7 +167,7 @@ def generate_expected_output( MUT, i ): # i = testset order
 
 def test_content( MUT, test_set_name, cont, testset_position ):
 
-	content = "\n\t@Test\n\tpublic void " + test_set_name + str(cont) + " {\n\t\t"
+	content = "\n\t@Test\n\tpublic void " + test_set_name + str(cont) + "() {\n\t\t"
 	content += MUT.output_type + " retorno = " + MUT.name + "("
 
 	# TO DO: gerar valores
