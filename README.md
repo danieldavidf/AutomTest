@@ -1,5 +1,5 @@
 # AutomTest
-Test case generator tool based on functional requirements.
+Towards a Test Case Generation Tool Based on Functional Requirements
 https://dl.acm.org/doi/10.1145/3439961.3440002
 
 ## Requisitos:
