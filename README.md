@@ -5,12 +5,22 @@ https://dl.acm.org/doi/10.1145/3439961.3440002
 ## Requisitos:
 PySimpleGUI
 
+Pillow
+
 ## Instalações:
-sudo apt install python3-pip
 
-sudo apt install python3-tk
+> Nota: 'tkinter' faz parte da biblioteca padrão
 
-pip3 install pysimplegui
+### Instalar pip3 e tkinter (Linux)
+sudo apt install python3-pip python3-tk
 
-### Para executar no Linux:
+### Instalar pip3 (MacOS)
+> Requer [Homebrew](https://brew.sh/)
+
+brew install python3
+
+### Instalar requisitos
+pip3 install pysimplegui pillow
+
+### Para executar:
 python3 main.py
