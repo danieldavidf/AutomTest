@@ -1,5 +1,5 @@
 import sys,PySimpleGUI as sg
-sys.path.append('../automtest/assets')
+sys.path.append('../AutomTest/assets')
 
 from components import Method, TestSet, Parameter, ParamRange
 from generator import *
@@ -148,11 +148,11 @@ while (True):
 				else: # int / double / float / Date
 					ppp = ParamRange(par,vals2[3],vals2[4],vals2[5])
 
-				if ( p.telaInicialConjTesteCorreta(vals2[1],vals2[2]) and p.entradaTipoCorreta(MUT.output_type,vals2[3],vals2[4],vals2[5])):
-					test = TestSet(vals2[1], int(vals2[2]),ppp)
+				if ( p.telaInicialConjTesteCorreta(vals2[2],vals2[3]) and p.entradaTipoCorreta(MUT.output_type,vals2[4],vals2[5],vals2[6])):
+					test = TestSet(vals2[2], int(vals2[3]),ppp)
 					win3_active = True
 					win2.Hide()
-					win3 = sg.Window('Parameters of the new test suite', layout.newLayoutEspecificarParam(MUT, vals2[1]),
+					win3 = sg.Window('Parameters of the new test suite', layout.newLayoutEspecificarParam(MUT, vals2[2]),
 						finalize=True, element_justification='center')
 					while (True):
 						ev3, vals3 = win3.Read()

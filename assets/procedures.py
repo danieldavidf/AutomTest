@@ -137,6 +137,11 @@ def isDate(strdate):
 
 def entradaTipoCorreta(tipo, out1, out2='', out3=''):
 	
+	# print(tipo)
+	# print(out1)
+	# print(out2)
+	# print(out3)
+
 	if ( isinstance(tipo,Parameter) ):
 		nome = tipo.name
 		tipo = tipo.type_name
@@ -278,9 +283,9 @@ def entradaTipoCorreta(tipo, out1, out2='', out3=''):
 						return False
 					elif (float(out1) >= float(out2)):
 						if (b):
-							sg.popup_quick_message('Parameter range '+nome+':\n\"From\" must be less than \"To\".')
+							sg.popup_quick_message('Parameter range '+nome+':\n\"From\" ('+str(out1)+') must be less than \"To\" ('+str(out2)+').')
 						else:
-							sg.popup_quick_message('Expected Output:\n\"From\" must be less than \"To\".')
+							sg.popup_quick_message('Expected Output:\n\"From\" ('+str(out1)+') must be less than \"To\" ('+str(out2)+').')
 						return False
 					else:
 						return True
