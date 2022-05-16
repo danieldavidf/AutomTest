@@ -1,14 +1,12 @@
 # AutomTest
 
-Test case generator tool for JUnit based on functional requirements.
-
 ## Publication
 
 [Towards a Test Case Generation Tool Based on Functional Requirements](https://dl.acm.org/doi/10.1145/3439961.3440002)
 
 ## Setup
 
-### Installation requirements:
+### Requirements:
 
 1. ```sudo apt install python3-pip```
 2. ```sudo apt install python3-tk``` (Tkinter)
