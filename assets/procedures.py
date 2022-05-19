@@ -136,11 +136,6 @@ def isDate(strdate):
 	    return False
 
 def entradaTipoCorreta(tipo, out1, out2='', out3=''):
-	
-	# print(tipo)
-	# print(out1)
-	# print(out2)
-	# print(out3)
 
 	if ( isinstance(tipo,Parameter) ):
 		nome = tipo.name
