@@ -1,5 +1,5 @@
 import sys,PySimpleGUI as sg
-sys.path.append('../automtest/assets')
+sys.path.append('../assets')
 import layout, random, procedures as p
 from components import TestSet
 
@@ -73,7 +73,6 @@ def newLayoutTipo( tipo ):
 	elif (tipo == 'Date'):
 		content += [
 			[sg.Text('From'),sg.InputText('', size=(10, 1)),sg.Text('to'),sg.InputText('', size=(10, 1))],
-			[sg.Text('Include:'),sg.InputText('', size=(10, 1))],
 		]
 	else: # int / float / double
 		content += [

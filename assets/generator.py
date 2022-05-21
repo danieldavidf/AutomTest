@@ -1,6 +1,39 @@
 import os,io,sys,random,string
-sys.path.append('../automtest/assets')
+sys.path.append('../assets')
 import procedures as p
+import datetime, random
+
+def get_YearMonthDay_from_Date(date):
+	#ymd = []
+	if (date.find('/') > 0):
+		ymd = date.split('/')
+		
+	elif(date.find('-') > 0):
+		ymd = date.split('-')
+		
+	return ymd
+
+
+def generate_Date(v1, v2, v3):
+
+	if (v1!='' and v2!=''):
+
+		ymd1 = get_YearMonthDay_from_Date(v1)
+		ymd2 = get_YearMonthDay_from_Date(v2)
+
+		start_date = datetime.date(int(ymd1[0]), int(ymd1[1]), int(ymd1[2]))
+		end_date = datetime.date(int(ymd2[0]), int(ymd2[1]), int(ymd2[2]))
+
+		time_between_dates = end_date - start_date
+		days_between_dates = time_between_dates.days
+		random_number_of_days = random.randrange(days_between_dates)
+		random_date = start_date + datetime.timedelta(days=random_number_of_days)
+		
+		return str(random_date)
+
+	else:
+		print("Data não foi preenchida corretamente.")
+		return False
 
 
 def generate_String(value, qtd):
@@ -107,6 +140,9 @@ def generate_param_value(MUT, i, j): # i = parameter order / j = testset order
 	elif (MUT.params[i].type_name == 'double' or MUT.params[i].type_name == 'float'):
 		return generate_decimal_numbers(MUT.params[i].type_name, MUT.testsets[j].ranges[i].v1, MUT.testsets[j].ranges[i].v2, MUT.testsets[j].ranges[i].v3)
 	
+	elif (MUT.params[i].type_name == 'Date'):
+		return "\"" + generate_Date(MUT.testsets[j].ranges[i].v1, MUT.testsets[j].ranges[i].v2, MUT.testsets[j].ranges[i].v3) + "\""
+
 	else: #boolean
 		if (MUT.testsets[j].ranges[i].v1.casefold() == "true"):
 			return "true"
