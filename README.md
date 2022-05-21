@@ -1,25 +1,54 @@
 # AutomTest
 
-## Publication
-
-[Towards a Test Case Generation Tool Based on Functional Requirements](https://dl.acm.org/doi/10.1145/3439961.3440002)
+- [Paper](https://dl.acm.org/doi/10.1145/3439961.3440002) (Towards a Test Case Generation Tool Based on Functional Requirements)
+- [Tool demonstration video](https://www.youtube.com/watch?v=xpNCwl_xpa0)
 
 ## Setup
 
-### Requirements:
+  ### Requirements:
 
-1. ```sudo apt install python3-pip```
-2. ```sudo apt install python3-tk``` (Tkinter)
-3. ```pip3 install pysimplegui``` (PySimpleGUI)
+  1. ```sudo apt install python3-pip```
+  2. ```sudo apt install python3-tk``` (Tkinter)
+  3. ```pip3 install pysimplegui``` (PySimpleGUI)
 
-### Running on linux
-```
-python3 main.py
-```
+  ### Running on linux:
+  ```
+  python3 main.py
+  ```
 
-## Remarks:
+## Remarks
 
-#### Note 1:
+#### 1. Specification of some variable types
+
+  - String
+
+    - predefined sets:
+
+    ```
+    sign/signs
+    alphanumeric/alphanumerics
+    any/all
+    number/numbers
+    letter/letters	
+    ```
+
+    - substrings (example)
+    
+    ```
+    [all][letter][alphanumeric]
+    ```
+
+    - size (example)
+    ```
+    [1~4][1][2~6]
+    ```
+
+  - Date:
+    ```
+    YYYY/MM/DD or YYYY-MM-DD
+    ```
+
+#### 2. Possible error in package version ***requests***
 
 If you get this error:
 
